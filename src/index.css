@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    direction: rtl;
+  }
+
+  @font-face {
+    font-family: 'Heebo';
+    src: url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap');
+  }
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px) rotateY(10deg);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.card-shine {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
